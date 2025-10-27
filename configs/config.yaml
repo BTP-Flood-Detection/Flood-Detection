@@ -1,0 +1,50 @@
+# Model Configuration
+model:
+  input_channels: 6  # S1 (2) + S2 (4)
+  num_classes: 2  # Background (0) and Flood (1)
+  architecture: "ensemble"  # resnet, swin, maxvit, or ensemble
+
+# Data Configuration
+data:
+  dataset: "Sen1Floods11"
+  image_size: [512, 512]
+  batch_size: 16
+  num_workers: 4
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+# Training Configuration
+training:
+  epochs: 100
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  optimizer: "AdamW"
+  scheduler: "cosine"
+  early_stopping_patience: 10
+  loss_type: "dice_bce"  # dice_bce, focal, or combined
+  
+# Paths
+paths:
+  data_root: "data/"
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  model_checkpoint: "models/"
+  logs: "logs/"
+
+# Ensemble Configuration
+ensemble:
+  models:
+    - resnet
+    - swin
+    - maxvit
+  aggregation: "mean"
+  uncertainty_threshold: 0.5
+
+# Inference Configuration
+inference:
+  batch_size: 8
+  confidence_threshold: 0.5
+  post_process: true
+  morphological_kernel_size: 3
+

@@ -1,0 +1,242 @@
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================================================
+# Virtual Environments
+# ============================================================================
+venv/
+ENV/
+env/
+.venv/
+env.bak/
+venv.bak/
+pythonenv*/
+
+# ============================================================================
+# IDEs and Editors
+# ============================================================================
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Spyder
+.spyderproject
+.spyproject
+
+# ============================================================================
+# Model files (trained weights - usually large)
+# ============================================================================
+models/*.pth
+models/*.pt
+models/*.h5
+models/*.ckpt
+models/*.pb
+models/*.onnx
+models/weights/
+checkpoints/
+*.safetensors
+
+# Exception: Keep specific pre-trained models if needed
+# !models/resnet_best.pt
+
+# ============================================================================
+# Data directories (satellite imagery and large datasets)
+# ============================================================================
+# Keep directory structure but ignore large data files
+data/raw/**/*.tif
+data/raw/**/*.tiff
+data/raw/**/*.jpg
+data/raw/**/*.jpeg
+data/raw/**/*.png
+data/raw/**/*.hdf
+data/raw/**/*.nc
+data/raw/**/*.h5
+data/processed/**/*
+data/splits/**/*
+
+# Keep gitkeep files to preserve directory structure
+!data/processed/.gitkeep
+!data/splits/.gitkeep
+!data/raw/.gitkeep
+
+# ============================================================================
+# Logs and outputs
+# ============================================================================
+logs/
+*.log
+outputs/
+results/
+wandb/
+mlruns/
+
+# ============================================================================
+# Tensorboard and Training Logs
+# ============================================================================
+runs/
+lightning_logs/
+tb_logs/
+tensorboard/
+
+# ============================================================================
+# Testing and Coverage
+# ============================================================================
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.benchmarks
+
+# ============================================================================
+# Type checking
+# ============================================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# ============================================================================
+# Environment variables and Credentials
+# ============================================================================
+.env
+.env.local
+.env.*.local
+*.env
+credentials.json
+config.json
+secrets.yaml
+secrets.yml
+*.pem
+*.key
+
+# Exception: Keep example/template config files
+!.env.example
+!config.example.yaml
+
+# ============================================================================
+# Google Earth Engine authentication
+# ============================================================================
+.credentials/
+ee-credentials.json
+
+# ============================================================================
+# Streamlit
+# ============================================================================
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.fseventsd
+.TemporaryItems
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# Temporary files
+# ============================================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.~lock.*
+
+# ============================================================================
+# Downloaded datasets and archives
+# ============================================================================
+downloads/
+extracted/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Exception: Keep important archives if any
+# !important_dataset.zip
+
+# ============================================================================
+# Large visualization and report files
+# ============================================================================
+*.html
+!index.html
+!docs/**/*.html
+
+# ============================================================================
+# Project-specific
+# ============================================================================
+# Uncomment if you want to ignore specific files
+# mvp.txt
+# STATUS.md
+# WHY_ZERO_PERFORMANCE.md
+
+# Ignore any local test/debug scripts
+test_local.py
+debug_*.py
+scratch*.py
